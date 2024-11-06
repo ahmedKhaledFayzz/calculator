@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>آلة حاسبة </title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <script src="./js/math.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-light">
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button class="btn-calc function" onclick="clearDisplay()">C</button>
+            <button class="btn-calc function" onclick="appendToDisplay('(')">(</button>
+            <button class="btn-calc function" onclick="appendToDisplay(')')">)</button>
+            <button class="btn-calc operation" onclick="appendToDisplay('/')">÷</button>
+
+            <button class="btn-calc number" onclick="appendToDisplay('7')">7</button>
+            <button class="btn-calc number" onclick="appendToDisplay('8')">8</button>
+            <button class="btn-calc number" onclick="appendToDisplay('9')">9</button>
+            <button class="btn-calc operation" onclick="appendToDisplay('*')">×</button>
+
+            <button class="btn-calc number" onclick="appendToDisplay('4')">4</button>
+            <button class="btn-calc number" onclick="appendToDisplay('5')">5</button>
+            <button class="btn-calc number" onclick="appendToDisplay('6')">6</button>
+            <button class="btn-calc operation" onclick="appendToDisplay('-')">-</button>
+
+            <button class="btn-calc number" onclick="appendToDisplay('1')">1</button>
+            <button class="btn-calc number" onclick="appendToDisplay('2')">2</button>
+            <button class="btn-calc number" onclick="appendToDisplay('3')">3</button>
+            <button class="btn-calc operation" onclick="appendToDisplay('+')">+</button>
+
+            <button class="btn-calc number" onclick="appendToDisplay('0')">0</button>
+            <button class="btn-calc number" onclick="appendToDisplay('.')">.</button>
+            <button class="btn-calc equals" onclick="calculate()">=</button>
+
+            <button class="btn-calc function" onclick="appendToDisplay('√(')">√</button>
+            <button class="btn-calc function" onclick="appendToDisplay('∛(')">∛</button>
+            <button class="btn-calc function" onclick="appendToDisplay('^')">^</button>
+            <button class="btn-calc function" onclick="appendToDisplay('sin(')">sin</button>
+
+            <button class="btn-calc function" onclick="appendToDisplay('cos(')">cos</button>
+            <button class="btn-calc function" onclick="appendToDisplay('tan(')">tan</button>
+            <button class="btn-calc function" onclick="appendToDisplay('log(')">log</button>
+            <button class="btn-calc function" onclick="appendToDisplay('ln(')">ln</button>
+
+            <button class="btn-calc function" onclick="appendToDisplay('pi')">π</button>
+            <button class="btn-calc function" onclick="appendFraction()">a/b</button>
+            <button class="btn-calc function" onclick="deleteLastDigit()">⌫</button>
+            <button class="btn-calc function" onclick="appendToDisplay('abs(')">|x|</button>
+        </div>
+        <button id="themeToggle" onclick="toggleTheme()">تغيير الثيم</button>
+        <button id="historyToggle" onclick="toggleHistory()">سجل العمليات</button>
+        <div id="historyPanel" class="history-panel">
+            <h3>سجل العمليات <button onclick="toggleHistory()" class="close-btn">&times;</button></h3>
+            <ul id="historyList"></ul>
+            <button onclick="clearAllHistory()" class="clear-all-btn">مسح كل السجل</button>
+        </div>
+        <div class="info-section">
+            <div class="developer-info">تم تطوير هذه الآلة الحاسبة بواسطة المهندس أحمد خالد</div>
+            <div class="teachers-info">تم إنشاء هذه الآلة لجميع طلاب الأساتذة الكرام أحمد جعفر ومحمد جعفر، أساتذة
+                الرياضيات بمدينة المحلة الكبرى</div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <h2>مرحبا بك!</h2>
+            <p>أنا آلة حاسبة محدثة لمساعدتك</p>
+            <button onclick="closeWelcomeModal()">ابدأ الحساب</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
